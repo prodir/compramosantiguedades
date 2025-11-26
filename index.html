@@ -25,10 +25,10 @@
       </a>
 
       <nav class="nav" id="nav">
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#que-compramos">Qué compramos</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#como-funciona">¿Cómo funciona?</a>
+        <a href="#que-compramos">¿Qué compramos?</a>
+        <a href="#beneficios">¿Quiénes somos?</a>
+        <a href="#footer">Contacto</a>
       </nav>
 
       <div class="header-cta">
@@ -204,8 +204,11 @@
   </div>
 </section>
 
-    <!-- QUÉ COMPRAMOS -->
-    <section id="que-compramos" class="types">
+
+
+<!-- QUÉ COMPRAMOS -->
+
+<section id="que-compramos" class="types reveal">
   <div class="container">
     <header class="section-head">
       <h2>¿Qué tipo de antigüedades compramos?</h2>
@@ -213,42 +216,42 @@
     </header>
 
     <div class="types-grid">
-      <article class="type-tile" style="--img:url('1.jpg')">
+      <article class="type-tile reveal-item" style="--img:url('1.jpg')">
         <div class="type-glass">
           <h3>Muebles antiguos</h3>
           <p>Sillas, mesas, aparadores, cómodas, vitrinas, bibliotecas y más.</p>
         </div>
       </article>
 
-      <article class="type-tile" style="--img:url('2.jpg')">
+      <article class="type-tile reveal-item" style="--img:url('2.jpg')">
         <div class="type-glass">
           <h3>Iluminación</h3>
           <p>Arañas, lámparas de pie, veladores y apliques antiguos.</p>
         </div>
       </article>
 
-      <article class="type-tile" style="--img:url('3.webp')">
+      <article class="type-tile reveal-item" style="--img:url('3.webp')">
         <div class="type-glass">
           <h3>Vajilla y cristalería</h3>
           <p>Juegos de copas, platos, fuentes, jarras y porcelana.</p>
         </div>
       </article>
 
-      <article class="type-tile" style="--img:url('4.jpg')">
+      <article class="type-tile reveal-item" style="--img:url('4.jpg')">
         <div class="type-glass">
           <h3>Decoración</h3>
           <p>Espejos, relojes, cuadros, marcos y adornos antiguos.</p>
         </div>
       </article>
 
-      <article class="type-tile" style="--img:url('5.jpg')">
+      <article class="type-tile reveal-item" style="--img:url('5.jpg')">
         <div class="type-glass">
           <h3>Sets completos</h3>
           <p>Comedores, dormitorios o conjuntos que quieras vender de una sola vez.</p>
         </div>
       </article>
 
-      <article class="type-tile" style="--img:url('6.jpg')">
+      <article class="type-tile reveal-item" style="--img:url('6.jpg')">
         <div class="type-glass">
           <h3>Para restaurar</h3>
           <p>Piezas con potencial de arreglo o restauración, según su estado.</p>
@@ -262,6 +265,10 @@
   </div>
 </section>
 
+
+
+<!--SECCION QUIENES SOMOS-->
+
 <section id="quienes-somos" class="about">
   <div class="container">
     <header class="section-head">
@@ -271,36 +278,54 @@
 
     <div class="about-grid">
       <!-- Texto / zonas -->
-      <article class="about-card glass-card">
-        <h3>Compramos y retiramos en CABA y alrededores</h3>
-        <p class="about-lead">
+      <div class="about-card">
+      <!-- Banner -->
+      <div class="about-banner" style="--banner:url('3.webp');">
+        <div class="about-banner__overlay"></div>
+
+        <!-- Avatar -->
+        <div class="about-avatar">
+          <img src="nosotros.jpg" alt="Foto del equipo" loading="lazy">
+        </div>
+
+        <!-- Texto cortito opcional arriba del banner (queda fino) -->
+        <div class="about-badge">Negocio familiar • Tasación rápida</div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="about-body">
+        <h3 class="about-title">Compramos y retiramos en CABA y alrededores</h3>
+        <p class="about-text">
           Nos enfocamos en hacer el proceso simple: nos enviás fotos, te pasamos una oferta y coordinamos el retiro.
         </p>
 
-        <div class="about-bullets">
-          <div class="about-pill">📍 CABA (todos los barrios)</div>
-          <div class="about-pill">🚚 Zona Norte / Oeste / Sur (según coordinación)</div>
-          <div class="about-pill">⚡ Respuesta rápida por WhatsApp</div>
+        <!-- tus chips -->
+        <div class="about-chips">
+          <span class="chip">📍 CABA (todos los barrios)</span>
+          <span class="chip">🚚 Zona Norte / Oeste / Sur (según coordinación)</span>
+          <span class="chip">⚡ Respuesta rápida por WhatsApp</span>
         </div>
 
-        <div class="about-box">
+        <!-- tu bloque zonas -->
+        <div class="about-zones">
           <h4>Zonas donde trabajamos</h4>
           <ul>
-            <li><strong>CABA:</strong> Recoleta, Palermo, Belgrano, Caballito, Almagro, Flores, Villa Urquiza, etc.</li>
-            <li><strong>Alrededores:</strong> consultanos tu barrio y te confirmamos si llegamos.</li>
-            <li><strong>Casos especiales:</strong> mudanzas, herencias y retiros de varios muebles.</li>
+            <li><b>CABA:</b> Recoleta, Palermo, Belgrano, Caballito, Almagro, Flores, Villa Urquiza, etc.</li>
+            <li><b>Alrededores:</b> consultanos tu barrio y te confirmamos si llegamos.</li>
+            <li><b>Casos especiales:</b> mudanzas, herencias y retiros de varios muebles.</li>
           </ul>
         </div>
 
-        <div class="about-cta">
-          <a class="btn btn-primary" href="https://wa.me/54911TU_NUMERO?text=Hola!%20Quiero%20vender%20antig%C3%BCedades.%20Estoy%20en%20..." target="_blank" rel="noopener">
-            Enviar ubicación por WhatsApp
-          </a>
-          <a class="btn btn-ghost" href="#contacto">Ver contacto</a>
+        <!-- botones -->
+        <div class="about-actions">
+          <a class="btn btn-primary" href="#contacto">Enviar ubicación por WhatsApp</a>
+          <a class="btn btn-ghost" href="#footer">Ver contacto</a>
         </div>
 
-        <p class="about-note">Tip: si no sabés si lo compramos, mandá foto igual y te decimos al toque.</p>
-      </article>
+        <p class="about-tip">Tip: si no sabés si lo compramos, mandá foto igual y te decimos al toque.</p>
+      </div>
+    </div>
+
 
       <!-- Mapa -->
       <aside class="map-card glass-card" aria-label="Mapa de zonas">
@@ -390,24 +415,19 @@
 
   </main>
 
- <!-- WhatsApp flotante -->
-<a
-  class="wa-float"
-  href="https://wa.me/54911XXXXXXXX?text=Hola!%20Quiero%20vender%20antig%C3%BCedades.%20Estoy%20en%20..."
-  target="_blank"
-  rel="noopener"
-  aria-label="Hablar por WhatsApp"
->
-  <span class="wa-tooltip" aria-hidden="true">Hablá con nosotros</span>
 
-  <span class="wa-icon" aria-hidden="true">
-    <!-- Icono WA (SVG) -->
-    <svg viewBox="0 0 32 32" width="22" height="22">
-      <path fill="currentColor" d="M19.11 17.53c-.26-.13-1.52-.75-1.75-.83-.24-.09-.41-.13-.59.13-.17.26-.67.83-.83 1-.15.17-.3.2-.56.07-.26-.13-1.1-.4-2.1-1.27-.77-.69-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.52.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.59-1.42-.8-1.95-.21-.5-.42-.43-.59-.43h-.5c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.29.95 2.54 1.08 2.72.13.17 1.86 2.83 4.5 3.97.63.27 1.12.43 1.5.55.63.2 1.2.17 1.66.1.5-.07 1.52-.62 1.74-1.22.21-.6.21-1.12.15-1.22-.07-.1-.24-.17-.5-.3z"/>
-      <path fill="currentColor" d="M16 3C8.82 3 3 8.82 3 16c0 2.28.59 4.43 1.64 6.31L3.5 29l6.83-1.08A12.9 12.9 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.6c-2.02 0-3.9-.58-5.5-1.57l-.4-.24-4.05.64.66-3.95-.26-.41A10.5 10.5 0 1 1 16 26.6z"/>
-    </svg>
-  </span>
+
+<!-- WhatsApp flotante (GLOBAL) -->
+<a class="wa-float" href="https://wa.me/54911XXXXXXXX?text=Hola%20quiero%20vender%20antig%C3%BCedades"
+   target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
+  <img src="whatsapp.png" alt="WhatsApp">
+  <span class="wa-tooltip">Hablános acá -></span>
 </a>
+
+
+
+
+
 
   <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -466,6 +486,34 @@
       }
     }
   });
+
+  // Reveal "Qué compramos" (tiles con stagger)
+(() => {
+  const section = document.getElementById('que-compramos');
+  if (!section) return;
+
+  const items = section.querySelectorAll('.type-tile.reveal-item');
+  if (!items.length) return;
+
+  // delay escalonado
+  items.forEach((el, i) => el.style.setProperty('--d', `${i * 90}ms`));
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in-view');
+      else entry.target.classList.remove('in-view'); // re-anima al volver
+    });
+  }, { threshold: 0.22 });
+
+  items.forEach(el => io.observe(el));
+})();
+
+
 </script>
 
 <!-- Script cinta de confianza -->
@@ -527,6 +575,62 @@
   }
 })();
 </script>
+
+
+<script>
+(() => {
+  // evita doble inicialización si pegás el script 2 veces
+  if (window.__navHideInit) return;
+  window.__navHideInit = true;
+
+  const header = document.querySelector('.site-header'); // <-- si tu clase es otra, cambiala
+  const nav = document.getElementById('nav');            // para no ocultar si el menú mobile está abierto
+  if (!header) return;
+
+  let lastY = window.scrollY || 0;
+  const showAtTop = 80;   // cerca del top siempre visible
+  const delta = 8;        // sensibilidad (más alto = menos sensible)
+  let ticking = false;
+
+  function update() {
+    const y = window.scrollY || document.documentElement.scrollTop;
+
+    // si estás arriba, siempre visible
+    if (y <= showAtTop) {
+      header.classList.remove('nav-hidden');
+      lastY = y;
+      ticking = false;
+      return;
+    }
+
+    // si el menú mobile está abierto, no ocultar
+    if (nav && nav.classList.contains('nav-open')) {
+      header.classList.remove('nav-hidden');
+      lastY = y;
+      ticking = false;
+      return;
+    }
+
+    // dirección
+    if (y > lastY + delta) {
+      header.classList.add('nav-hidden');     // bajando
+    } else if (y < lastY - delta) {
+      header.classList.remove('nav-hidden');  // subiendo
+    }
+
+    lastY = y;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+})();
+</script>
+
 
 </body>
 </html>
