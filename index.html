@@ -266,9 +266,38 @@
 </section>
 
 
+<!--SECCION CARRUSEL INFINITO DE CATEGORIAS -->
+
+<section class="marquee">
+  <div class="container">
+    <div class="marquee-wrap" aria-label="Categorías que compramos">
+      <div class="marquee-track">
+        <span class="mq">🪑 Muebles antiguos</span>
+        <span class="mq">💡 Iluminación</span>
+        <span class="mq">🍷 Vajilla &amp; cristalería</span>
+        <span class="mq">🖼️ Decoración</span>
+        <span class="mq">🧳 Sets completos</span>
+        <span class="mq">🛠️ Para restaurar</span>
+        <span class="mq">📦 Retiro a domicilio</span>
+        <span class="mq">⚡ Tasación rápida</span>
+
+        <!-- Duplicado para loop perfecto -->
+        <span class="mq">🪑 Muebles antiguos</span>
+        <span class="mq">💡 Iluminación</span>
+        <span class="mq">🍷 Vajilla &amp; cristalería</span>
+        <span class="mq">🖼️ Decoración</span>
+        <span class="mq">🧳 Sets completos</span>
+        <span class="mq">🛠️ Para restaurar</span>
+        <span class="mq">📦 Retiro a domicilio</span>
+        <span class="mq">⚡ Tasación rápida</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!--SECCION QUIENES SOMOS-->
-
 <section id="quienes-somos" class="about">
   <div class="container">
     <header class="section-head">
@@ -276,83 +305,86 @@
       <p>Somos un negocio familiar de compra de antigüedades y muebles usados. Tasamos rápido y retiramos a domicilio.</p>
     </header>
 
-    <div class="about-grid">
-      <!-- Texto / zonas -->
-      <div class="about-card">
-      <!-- Banner -->
-      <div class="about-banner" style="--banner:url('3.webp');">
-        <div class="about-banner__overlay"></div>
+    <div class="about-stack">
 
-        <!-- Avatar -->
-        <div class="about-avatar">
-          <img src="nosotros.jpg" alt="Foto del equipo" loading="lazy">
+      <!-- TARJETA PERFIL (CLICKEABLE A IG) -->
+      <article
+        class="profile-card"
+        data-instagram="https://www.instagram.com/TU_USUARIO/"
+        role="link"
+        tabindex="0"
+        aria-label="Abrir Instagram de Compramos Antigüedades"
+      >
+        <div class="profile-banner" style="--banner:url('3.webp')">
+          <span class="profile-badge">Negocio familiar • Tasación rápida</span>
+
+          <img class="profile-avatar" src="nosotros.jpg" alt="Equipo Compramos Antigüedades" />
         </div>
 
-        <!-- Texto cortito opcional arriba del banner (queda fino) -->
-        <div class="about-badge">Negocio familiar • Tasación rápida</div>
-      </div>
+        <div class="profile-body">
+          <h3>Compramos y retiramos en CABA y alrededores</h3>
+          <p>Nos enfocamos en hacer el proceso simple: nos enviás fotos, te pasamos una oferta y coordinamos el retiro.</p>
 
-      <!-- Contenido -->
-      <div class="about-body">
-        <h3 class="about-title">Compramos y retiramos en CABA y alrededores</h3>
-        <p class="about-text">
-          Nos enfocamos en hacer el proceso simple: nos enviás fotos, te pasamos una oferta y coordinamos el retiro.
-        </p>
+          <div class="profile-chips">
+            <span class="chip">📍 CABA (todos los barrios)</span>
+            <span class="chip">🚚 Zona Norte / Oeste / Sur (según coordinación)</span>
+            <span class="chip">⚡ Respuesta rápida por WhatsApp</span>
+          </div>
 
-        <!-- tus chips -->
-        <div class="about-chips">
-          <span class="chip">📍 CABA (todos los barrios)</span>
-          <span class="chip">🚚 Zona Norte / Oeste / Sur (según coordinación)</span>
-          <span class="chip">⚡ Respuesta rápida por WhatsApp</span>
+          <div class="profile-box">
+            <h4>Zonas donde trabajamos</h4>
+            <ul>
+              <li><strong>CABA:</strong> Recoleta, Palermo, Belgrano, Caballito, Almagro, Flores, Villa Urquiza, etc.</li>
+              <li><strong>Alrededores:</strong> consultanos tu barrio y te confirmamos si llegamos.</li>
+              <li><strong>Casos especiales:</strong> mudanzas, herencias y retiros de varios muebles.</li>
+            </ul>
+          </div>
+
+          <div class="profile-actions">
+            <a class="btn btn-primary" href="https://wa.me/54911XXXXXXXX?text=Hola%2C%20quiero%20coordinar%20una%20tasaci%C3%B3n." target="_blank" rel="noopener">
+              Enviar ubicación por WhatsApp
+            </a>
+
+            <a class="btn btn-ghost" href="#contacto">Ver contacto</a>
+
+            <!-- opcional: botón explícito a IG (además del click en la tarjeta) -->
+            <a class="btn btn-ig" href="https://www.instagram.com/TU_USUARIO/" target="_blank" rel="noopener">
+              Instagram
+            </a>
+          </div>
+
+          <p class="profile-tip">Tip: si no sabés si lo compramos, mandá foto igual y te decimos al toque.</p>
         </div>
+      </article>
 
-        <!-- tu bloque zonas -->
-        <div class="about-zones">
-          <h4>Zonas donde trabajamos</h4>
-          <ul>
-            <li><b>CABA:</b> Recoleta, Palermo, Belgrano, Caballito, Almagro, Flores, Villa Urquiza, etc.</li>
-            <li><b>Alrededores:</b> consultanos tu barrio y te confirmamos si llegamos.</li>
-            <li><b>Casos especiales:</b> mudanzas, herencias y retiros de varios muebles.</li>
-          </ul>
-        </div>
-
-        <!-- botones -->
-        <div class="about-actions">
-          <a class="btn btn-primary" href="#contacto">Enviar ubicación por WhatsApp</a>
-          <a class="btn btn-ghost" href="#footer">Ver contacto</a>
-        </div>
-
-        <p class="about-tip">Tip: si no sabés si lo compramos, mandá foto igual y te decimos al toque.</p>
-      </div>
-    </div>
-
-
-      <!-- Mapa -->
-      <aside class="map-card glass-card" aria-label="Mapa de zonas">
-        <div class="map-head">
-          <h3>Mapa</h3>
-          <p>Referencia: CABA y alrededores</p>
-        </div>
+      <!-- MAPA ABAJO (MISMO ANCHO) -->
+      <article class="map-card">
+        <h3>Mapa</h3>
+        <p class="muted">Referencia: CABA y alrededores</p>
 
         <div class="map-frame">
-          <!-- Cambiá el q= por tu dirección exacta si querés -->
           <iframe
-            title="Mapa de Google"
-            src="https://www.google.com/maps?q=Capital%20Federal,%20Buenos%20Aires&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.9650849815225!2d-58.451113!3d-34.57975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb55b1d75411d%3A0xc50d1fe7f68911ed!2sAntiguedadesCott!5e0!3m2!1ses-419!2sar!4v1764949679767!5m2!1ses-419!2sar"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
+            title="Mapa de zonas de trabajo"
+          ></iframe>
         </div>
 
-        <div class="map-foot">
-          <span class="map-chip">📌 Coordinamos por WhatsApp</span>
-          <span class="map-chip">🕒 Retiro a domicilio</span>
+        <div class="map-chips">
+          <span class="chip">📌 Coordinamos por WhatsApp</span>
+          <span class="chip">🕒 Retiro a domicilio</span>
         </div>
-      </aside>
+      </article>
+
     </div>
   </div>
 </section>
+
 
 <footer id="footer" class="site-footer">
   <div class="container footer-inner">
@@ -574,6 +606,30 @@
     runCountUp();
   }
 })();
+
+// Click en la tarjeta "Quiénes somos" -> Instagram (sin romper botones)
+const profileCard = document.querySelector('.profile-card');
+if (profileCard) {
+  const ig = profileCard.getAttribute('data-instagram');
+
+  const openIG = () => {
+    if (ig) window.open(ig, '_blank', 'noopener');
+  };
+
+  profileCard.addEventListener('click', (e) => {
+    // Si clickeó un link o botón adentro, NO forzamos el IG
+    if (e.target.closest('a, button')) return;
+    openIG();
+  });
+
+  profileCard.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openIG();
+    }
+  });
+}
+
 </script>
 
 
@@ -630,6 +686,8 @@
   }, { passive: true });
 })();
 </script>
+
+
 
 
 </body>
