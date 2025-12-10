@@ -264,17 +264,12 @@ body.page-loaded {
   font-size: 0.8rem;
   color: var(--muted);
 }
-
 /* Hamburguesa */
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  width: 36px;
-  height: 36px;
+.menu-toggle{
+  display:none;
+  position: relative;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.55);
   background: rgba(248, 250, 252, 0.7);
@@ -282,29 +277,34 @@ body.page-loaded {
   padding: 0;
 }
 
-.menu-toggle span {
-  width: 16px;
+/* las 3 líneas centradas, sin “gap” */
+.menu-toggle span{
+  position: absolute;
+  left: 50%;
+  width: 18px;
   height: 2px;
   border-radius: 999px;
-  background: #4b5563;
-  transition:
-    transform 0.18s ease,
-    opacity 0.18s ease,
-    translate 0.18s ease;
+  background: #000;
+  transform: translateX(-50%);
+  transition: transform .2s ease, opacity .2s ease;
 }
 
-.menu-toggle.is-open span:nth-child(1) {
-  transform: rotate(45deg);
-  translate: 0 4px;
-}
+/* posiciones cerradas */
+.menu-toggle span:nth-child(1){ top: 12px; }
+.menu-toggle span:nth-child(2){ top: 19px; }
+.menu-toggle span:nth-child(3){ top: 26px; }
 
-.menu-toggle.is-open span:nth-child(2) {
+/* estado abierto → X perfecta y centrada */
+.menu-toggle.is-open span:nth-child(1){
+  top: 19px;
+  transform: translateX(-50%) rotate(45deg);
+}
+.menu-toggle.is-open span:nth-child(2){
   opacity: 0;
 }
-
-.menu-toggle.is-open span:nth-child(3) {
-  transform: rotate(-45deg);
-  translate: 0 -4px;
+.menu-toggle.is-open span:nth-child(3){
+  top: 19px;
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 /* =========================
@@ -325,6 +325,7 @@ body.page-loaded {
   align-items: center;
   position: relative;
   overflow: hidden;
+  
 }
 
 
@@ -1672,6 +1673,99 @@ body.page-loaded {
 
   .hero-meta {
     gap: 0.7rem;
+  }
+  .hero{
+    min-height: auto;
+    
+    align-items: flex-start;
+    padding-bottom: calc(1.2rem + 94px + env(safe-area-inset-bottom)); /* espacio real para la pill */
+  }
+
+  .trust-float{
+    bottom: .9rem;
+    padding: 0 .9rem;
+  }
+
+  .trust-pill{
+    width: 100%;
+    border-radius: 18px;   /* más cómodo en mobile */
+    padding: .9rem .95rem;
+  }
+
+  .trust-row{
+    gap: .55rem .75rem;
+  }
+
+  .trust-sep{
+    display: none;         /* evita “•••” apretado */
+  }
+
+ /* el nav pasa a ser panel desplegable */
+  #nav.nav{
+    position: absolute;
+    top: calc(100% + 10px);       /* debajo del header */
+    left: 16px;
+    right: 16px;
+
+    display: grid;
+    gap: 8px;
+
+    padding: 14px;
+    border-radius: 22px;
+
+    background: rgba(1, 4, 19, 0.925);   /* glass oscuro para que se lea sobre video */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 22px 60px rgba(0,0,0,0.35);
+
+    /* cerrado por defecto */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: opacity .2s ease, transform .2s ease;
+    z-index: 50;
+  }
+
+  /* abierto cuando JS agrega .nav-open */
+  #nav.nav.nav-open{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* estilos de links */
+  #nav.nav a{
+    display: block;
+    padding: 12px 12px;
+    border-radius: 14px;
+    text-decoration: none;
+
+    color: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: background .18s ease, transform .18s ease, border-color .18s ease;
+  }
+
+  #nav.nav a:hover{
+    background: rgba(255,255,255,0.10);
+    border-color: rgba(255,255,255,0.14);
+    transform: translateY(-1px);
+  }
+
+    .site-header{
+    position: fixed; /* clave: que el video quede detrás */
+    top: 12px;
+    z-index: 1000;
+    background: transparent;
+  }
+
+  /* el dropdown del nav se posiciona respecto al “pill” */
+  .header-inner{
+    position: relative;
   }
 
   .contact-form {
