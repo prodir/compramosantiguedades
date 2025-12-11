@@ -426,9 +426,10 @@ body.page-loaded {
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.1rem;
-  font-size: 0.8rem;
+  gap: 1.2rem;
+  font-size: 1rem;
   color: #e5e7eb;
+  margin-top: 2rem;
 }
 
 .hero-meta span {
@@ -679,6 +680,50 @@ body.page-loaded {
   margin: 0 auto;
   padding: .5rem 0;
 }
+
+/* ===== Título flotante en el lado opuesto de la línea ===== */
+
+.t-item::before {
+  content: attr(data-label);
+  position: absolute;
+  /* centrado vertical respecto del item */
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px); /* arranca un pelín hacia adentro */
+  font-size: 2.95rem;        /* mismo tamaño que ya estabas usando */
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #0f172a;
+  max-width: 420px;
+  white-space: normal;
+  pointer-events: none;
+  /* sombra para darle presencia */
+  text-shadow: 0 18px 40px rgba(15, 23, 42, 0.377);
+  opacity: 0;
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+/* Cuando la tarjeta entra en vista, mostramos el título y lo “acomodamos” */
+.t-item.step-card.in-view::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Paso a la izquierda → título a la DERECHA de la línea */
+.t-item.t-left::before {
+  left: 100%;
+  margin-left: 1.8rem;   /* separación hacia afuera */
+  text-align: left;
+}
+
+/* Paso a la derecha → título a la IZQUIERDA de la línea */
+.t-item.t-right::before {
+  right: 100%;
+  margin-right: 1.8rem;
+  text-align: right;
+}
+
 
 /* línea central tenue */
 .timeline::before{
