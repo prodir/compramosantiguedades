@@ -30,7 +30,8 @@ body {
   margin: 0;
   padding: 0;
   transform: none !important;
-
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -1615,7 +1616,7 @@ body.page-loaded {
    RESPONSIVE
    ========================= */
 
-@media (max-width: 992px) {
+@media (max-width: 1269px) {
   .hero-grid {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   }
@@ -1641,12 +1642,21 @@ body.page-loaded {
   .header-phone {
     display: none;
   }
+    .t-item::before {
+    content: none;   /* elimina el pseudo-elemento */
+    display: none;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1268px) {
   .header-inner {
     gap: 0.6rem;
   }
+
+    .t-item::before {
+    content: none;   /* elimina el pseudo-elemento */
+    display: none;
+    }
 
   .nav {
     position: absolute;
@@ -1706,10 +1716,14 @@ body.page-loaded {
     bottom: 1rem;
   }
 }
-
 @media (max-width: 480px) {
   .container {
     width: min(100% - 2rem, 100%);
+  }
+
+  .t-item::before {
+    content: none;
+    display: none;
   }
 
   .hero-text h1 {
@@ -1717,13 +1731,69 @@ body.page-loaded {
   }
 
   .hero-meta {
-    gap: 0.7rem;
+    gap: 0.1rem;
   }
-  .hero{
-    min-height: auto;
-    
+
+  main {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  /* Quitar el aire propio del section del hero
+     y subirlo un poquito bajo el header fijo */
+  #inicio.hero {
+    padding-top: 0 !important;   /* fuera padding del section */
+    margin-top: 0px;           /* ajustá -8, -12, etc. a gusto */
+  }
+
+  /* Ajustar el contenido interno del hero */
+  .container.hero-grid {
+    padding-top: 1.4rem !important;   /* separa un poco del header */
+    padding-bottom: 4.2rem !important;
+  }
+
+  /* Por si algún título mete margen extra arriba */
+  .hero-grid > *:first-child,
+  .hero-grid h1 {
+    margin-top: 0 !important;
+  }
+
+  .hero {
+    min-height: 100vh;
     align-items: flex-start;
-    padding-bottom: calc(1.2rem + 94px + env(safe-area-inset-bottom)); /* espacio real para la pill */
+
+    /* pisamos cualquier padding que venga de arriba */
+    padding: 1rem 0 3.6rem !important;
+  }
+
+    /* 1) Ajustamos el padding del contenedor principal del hero */
+  .hero-grid {
+    padding-top: 1.5rem !important;   /* bajalo a gusto */
+    padding-bottom: 4rem;
+  }
+
+  /* 2) Evitamos que el primer hijo empuje todo hacia abajo */
+  .hero-grid > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  /* por las dudas, también a la pill de arriba si tiene margen */
+  .hero-badge,
+  .hero-chip,
+  .hero-meta-top {
+    margin-top: 0 !important;
+  }
+
+  .hero-inner,
+  .hero-content {
+    padding-top: 0 !important;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  .hero-inner h1,
+  .hero-content h1 {
+    margin-top: 0;
   }
 
   .trust-float{
@@ -1733,7 +1803,7 @@ body.page-loaded {
 
   .trust-pill{
     width: 100%;
-    border-radius: 18px;   /* más cómodo en mobile */
+    border-radius: 18px;
     padding: .9rem .95rem;
   }
 
@@ -1742,56 +1812,44 @@ body.page-loaded {
   }
 
   .trust-sep{
-    display: none;         /* evita “•••” apretado */
+    display: none;
   }
 
- /* el nav pasa a ser panel desplegable */
   #nav.nav{
     position: absolute;
-    top: calc(100% + 10px);       /* debajo del header */
+    top: calc(100% + 10px);
     left: 16px;
     right: 16px;
-
     display: grid;
     gap: 8px;
-
     padding: 14px;
     border-radius: 22px;
-
-    background: rgba(1, 4, 19, 0.925);   /* glass oscuro para que se lea sobre video */
+    background: rgba(1, 4, 19, 0.925);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-
     border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow: 0 22px 60px rgba(0,0,0,0.35);
-
-    /* cerrado por defecto */
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
-
     transition: opacity .2s ease, transform .2s ease;
     z-index: 50;
   }
 
-  /* abierto cuando JS agrega .nav-open */
   #nav.nav.nav-open{
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
   }
 
-  /* estilos de links */
   #nav.nav a{
     display: block;
     padding: 12px 12px;
     border-radius: 14px;
     text-decoration: none;
-
     color: rgba(255,255,255,0.92);
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
-
     transition: background .18s ease, transform .18s ease, border-color .18s ease;
   }
 
@@ -1801,14 +1859,13 @@ body.page-loaded {
     transform: translateY(-1px);
   }
 
-    .site-header{
-    position: fixed; /* clave: que el video quede detrás */
+  .site-header{
+    position: fixed;
     top: 12px;
     z-index: 1000;
     background: transparent;
   }
 
-  /* el dropdown del nav se posiciona respecto al “pill” */
   .header-inner{
     position: relative;
   }
