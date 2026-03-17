@@ -1180,6 +1180,7 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 }
 
 .section-qs h2{
+  padding: 1.5rem;
   margin: 0 0 .4rem;
   font-family: "Poppins", system-ui, sans-serif;
   font-size: clamp(1.6rem, 2.2vw, 2.1rem);
@@ -1189,6 +1190,9 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 .section-qs p{
   margin: 0;
   color: var(--crema);
+  font-size: 1.3rem;
+  font-weight: 500;
+  
 }
 
 .profile-card{
@@ -1549,17 +1553,28 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 }
 
 /* Línea final de copyright */
-.footer-bottom {
-  margin-top: 0.6rem;
-  border-top: 1px solid rgba(147, 156, 163, 0.36);
-  padding-top: 0.7rem;
-  width: 100%;
+.footer-copy {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.68);
 }
 
-.footer-bottom p {
-  margin: 0;
-  font-size: 0.82rem;
-  color: rgba(147, 156, 163, 0.85);
+.footer-copy a {
+  color: #d1a15c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-copy a:hover {
+  color: #e0b574;
+}
+
+.copy-sep {
+  margin: 0 0.45rem;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* ===== Responsive footer ===== */
@@ -1965,5 +1980,15 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 
   .contact-form {
     padding: 1.1rem 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.88rem;
+    padding: 0 12px;
+  }
+
+  .copy-sep {
+    display: inline-block;
+    margin: 0 0.3rem;
   }
 }
