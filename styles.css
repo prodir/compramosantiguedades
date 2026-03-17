@@ -1315,7 +1315,7 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 
 /* Base para todos los botones del perfil */
 .profile-actions .btn {
-  border-radius: 999px;
+  border-radius: 15px;
   padding: 0.75rem 1.4rem;
   font-size: 0.95rem;
   font-weight: 600;
@@ -1517,7 +1517,7 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 
 .fbtn {
   padding: 0.9rem 1.8rem;
-  border-radius: 999px;
+  border-radius: 15px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -1542,7 +1542,7 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 
 .fbtn-wa {
   background: rgba(200, 151, 91, 0.95);      /* naranja marca */
-  color: #ffffff;
+  color: var(--crema);
   border-color: rgba(200, 151, 91, 1);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
@@ -1562,14 +1562,14 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
 }
 
 .footer-copy a {
-  color: #d1a15c;
+  color: var(--dorado);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .footer-copy a:hover {
-  color: #e0b574;
+  color: var(--dorado);
 }
 
 .copy-sep {
@@ -1874,77 +1874,27 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
     gap: 0.1rem;
   }
 
-  main {
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  /* Quitar el aire propio del section del hero
-     y subirlo un poquito bajo el header fijo */
-  #inicio.hero {
-    padding-top: 0 !important;   /* fuera padding del section */
-    margin-top: 0px;           /* ajustá -8, -12, etc. a gusto */
-  }
-
-  /* Ajustar el contenido interno del hero */
-  .container.hero-grid {
-    padding-top: 1.4rem !important;   /* separa un poco del header */
-    padding-bottom: 4.2rem !important;
-  }
-
-  /* Por si algún título mete margen extra arriba */
-  .hero-grid > *:first-child,
-  .hero-grid h1 {
-    margin-top: 0 !important;
-  }
+  
+  
 
   .hero {
     min-height: 100vh;
     align-items: flex-start;
-
-    /* pisamos cualquier padding que venga de arriba */
-    padding: 1rem 0 3.6rem !important;
+    padding: 3rem 0 5rem !important;
   }
 
-    /* 1) Ajustamos el padding del contenedor principal del hero */
-  .hero-grid {
-    padding-top: 1.5rem !important;   /* bajalo a gusto */
-    padding-bottom: 4rem;
+  .hero-actions {
+    margin-top: 1rem;
   }
-
-  /* 2) Evitamos que el primer hijo empuje todo hacia abajo */
-  .hero-grid > *:first-child {
-    margin-top: 0 !important;
-  }
-
-  /* por las dudas, también a la pill de arriba si tiene margen */
-  .hero-badge,
-  .hero-chip,
-  .hero-meta-top {
-    margin-top: 0 !important;
-  }
-
-  .hero-inner,
-  .hero-content {
-    padding-top: 0 !important;
-    padding-bottom: 0;
-    margin-top: 0;
-  }
-
-  .hero-inner h1,
-  .hero-content h1 {
-    margin-top: 0;
-  }
-
-  .trust-float{
-    bottom: .9rem;
-    padding: 0 .9rem;
+  .hero-meta{
+    margin-bottom: 2rem;
   }
 
   .trust-pill{
     width: 100%;
     border-radius: 18px;
     padding: .9rem .95rem;
+    margin-top: 1rem;
   }
 
   .trust-row{
@@ -1954,7 +1904,8 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
   .trust-sep{
     display: none;
   }
-.site-header{
+  
+  .site-header{
     top: 8px;
   }
 
@@ -1979,7 +1930,7 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
   }
 
     .section-head {
-    padding-inline: 1rem;
+    padding-inline: .1rem;
     text-align: center;
   }
 
