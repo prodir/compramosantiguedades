@@ -7,8 +7,6 @@
   <meta name="description" content="Compramos muebles y objetos antiguos. Envíanos fotos por WhatsApp, te hacemos una oferta y retiramos en tu domicilio. Rápido, seguro y sin complicaciones." />
   <link rel="stylesheet" href="styles.css">
   <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +36,6 @@
       </nav>
 
       <div class="header-cta">
-        <span class="header-phone">Atención de Lunes a Sábados</span>
         <!-- Cambiá el número de WhatsApp acá -->
         <a class="btn btn-primary" href="https://wa.me/5491179383232?text=Hola%2C%20tengo%20antig%C3%BCedades%20para%20vender" target="_blank" rel="noopener">
           Enviar fotos por WhatsApp
@@ -55,7 +52,7 @@
     <!-- HERO -->
 <section class="hero" id="inicio">
   <!-- Video de fondo -->
-  <video class="hero-video" autoplay muted loop playsinline>
+<video class="hero-video" autoplay muted loop playsinline preload="metadata">
     <source src="videopruebahero.mp4" type="video/mp4" />
     Tu navegador no soporta el video HTML5.
   </video>
@@ -91,8 +88,6 @@
     <div class="container">
       <div class="trust-pill">
         <div class="trust-row">
-      
-
           <span class="trust-sep">•</span>
           <span class="trust-item">Muebles</span>
 
@@ -130,7 +125,7 @@
 
         <div class="t-card">
           <div class="t-media">
-            <img src="https://images.pexels.com/photos/172289/pexels-photo-172289.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Enviar fotos por WhatsApp" />
+            <img src="" alt="Enviar fotos por WhatsApp" />
           </div>
 
           <div class="t-content">
@@ -160,7 +155,7 @@
 
         <div class="t-card">
           <div class="t-media">
-            <img src="https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pago al instante" />
+            <img src="" alt="Pago al instante" />
           </div>
 
           <div class="t-content">
@@ -189,7 +184,7 @@
 
         <div class="t-card">
           <div class="t-media">
-            <img src="https://images.pexels.com/photos/7242748/pexels-photo-7242748.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Retiro a domicilio" />
+            <img src="" alt="Retiro a domicilio" />
           </div>
 
           <div class="t-content">
@@ -376,7 +371,7 @@
 
 <footer id="footer" class="site-footer">
   <div class="container footer-inner">
-
+    
     <div class="footer-brand">
       <img
         src="sello1.png"
@@ -449,17 +444,12 @@
 
 
 
-  <script>
+  <script defer>
   document.addEventListener('DOMContentLoaded', () => {
     // ===== Fade-in de la página =====
     document.body.classList.add('page-loaded');
 
-    // ===== Año en footer =====
-    const yearEl = document.getElementById('year');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
-
+    
     // ===== Menú mobile =====
     const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
@@ -539,7 +529,7 @@
 </script>
 
 <!-- Script cinta de confianza -->
- <script>
+ <script defer>
 (() => {
   const el = document.querySelector('.countup');
   if (!el) return;
@@ -597,33 +587,10 @@
   }
 })();
 
-// Click en la tarjeta "Quiénes somos" -> Instagram (sin romper botones)
-const profileCard = document.querySelector('.profile-card');
-if (profileCard) {
-  const ig = profileCard.getAttribute('data-instagram');
-
-  const openIG = () => {
-    if (ig) window.open(ig, '_blank', 'noopener');
-  };
-
-  profileCard.addEventListener('click', (e) => {
-    // Si clickeó un link o botón adentro, NO forzamos el IG
-    if (e.target.closest('a, button')) return;
-    openIG();
-  });
-
-  profileCard.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      openIG();
-    }
-  });
-}
-
 </script>
 
 
-<script>
+<script defer>
 (() => {
   // evita doble inicialización si pegás el script 2 veces
   if (window.__navHideInit) return;
