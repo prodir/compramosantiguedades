@@ -185,9 +185,10 @@ body.page-loaded {
   gap: 1.4rem;
 }
 .nav a {
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   color: var(--crema);
   text-decoration: none;
+  text-shadow: var(--dorado);
   padding: 0.2rem 0;
   position: relative;
   font-weight: 500;
