@@ -1665,6 +1665,10 @@ body.is-loaded .hero-reveal.r-6 { animation-delay: 0.40s; } /* trust pill */
     transform: translateX(4px);
   }
 
+  .header-cta .btn-primary{ 
+    display: none;
+  }
+
   .hero {
     min-height: 100vh;
     align-items: flex-start;
